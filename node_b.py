@@ -2,8 +2,8 @@
 # NODE B - Penerima Announcement Reticulum
 # ============================================================
 # Script ini berfungsi sebagai node penerima announcement
-# dari node lain di jaringan Reticulum.
-# Node B ini jalan sebagai TCP Server yang listen di port 4242.
+# dari node lain di jaringan Reticulum
+# Node B ini jalan sebagai TCP Server yang listen di port 4242
 # ============================================================
 
 import os      # buat manipulasi path & environment variable
@@ -28,7 +28,7 @@ CONFIG_DIR = os.environ.get("RETICULUM_CONFIG", "/reticulum")
 # ============================================================
 # CLASS HANDLER ANNOUNCEMENT
 # ============================================================
-# Class ini dipakai buat handle announcement yang masuk.
+# Class ini dipakai buat handle announcement yang masuk
 # RNS.Transport butuh object yang punya:
 #   1. attribute  : aspect_filter
 #   2. method     : received_announce(...)
@@ -49,7 +49,7 @@ class AnnouncementHandler:
         is_path_response=False,     # flag kalau ini path response (optional)
     ):
         # Method ini otomatis dipanggil tiap ada announcement masuk
-        # yang cocok sama aspect_filter di atas.
+        # yang cocok sama aspect_filter di atas
 
         # Print header penanda announcement diterima
         # flush=True -> biar langsung keluar di stdout, gak ketahan buffer
@@ -75,7 +75,7 @@ class AnnouncementHandler:
 # ============================================================
 # FUNGSI MAIN
 # ============================================================
-# Fungsi utama buat setup config, init Reticulum, dan jalanin loop.
+# Fungsi utama buat setup config, init Reticulum, dan jalanin loop
 # ============================================================
 
 def main():
@@ -92,9 +92,9 @@ def main():
         with open(config_path, "w", encoding="utf-8") as config:
             # Isi config:
             # [reticulum]
-            #   enable_transport = No  -> node ini BUKAN transport node
+            #   enable_transport = No  -> node ini BUKkAN transport node
             # [logging]
-            #   loglevel = 4           -> level logging (0-7, makin gede makin verbose)
+            #   loglevel = 4           -> level logging (0-7, makin gede makin verbose...)
             # [interfaces]
             #   TCPServerInterface     -> listen TCP di 0.0.0.0:4242
             config.write(

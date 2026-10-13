@@ -2,8 +2,8 @@
 # NODE A - Pengirim Announcement Reticulum
 # ============================================================
 # Script ini berfungsi sebagai node pengirim announcement
-# ke Node B lewat jaringan Reticulum.
-# Node A ini jalan sebagai TCP Client yang connect ke "node_b:4242".
+# ke Node B lewat jaringan Reticulum
+# Node A ini jalan sebagai TCP Client yang connect ke "node_b:4242"
 # ============================================================
 
 import os      # buat manipulasi path & environment variable
@@ -31,8 +31,8 @@ CONFIG_DIR = os.environ.get("RETICULUM_CONFIG", "/reticulum")
 # ============================================================
 # FUNGSI PREPARE_CONFIG
 # ============================================================
-# Fungsi ini nyiapin file config Reticulum buat Node A.
-# Kalau file config belum ada -> dibuat baru.
+# Fungsi ini nyiapin file config Reticulum buat Node A
+# Kalau file config belum ada -> dibuat baru
 # ============================================================
 
 def prepare_config():
@@ -74,7 +74,7 @@ def prepare_config():
 # FUNGSI MAIN
 # ============================================================
 # Fungsi utama buat setup config, init Reticulum, bikin identity,
-# bikin destination, dan kirim announcement.
+# bikin destination, dan kirim announcement
 # ============================================================
 
 def main():
