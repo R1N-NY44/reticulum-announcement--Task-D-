@@ -1,0 +1,29 @@
+
+services:
+  node_b:
+    build: .
+    container_name: reticulum-node-b
+    command: ["python", "node_b.py"]
+    volumes:
+      - node_b_data:/reticulum
+    networks:
+      - reticulum_network
+
+  node_a:
+    build: .
+    container_name: reticulum-node-a
+    command: ["python", "node_a.py"]
+    depends_on:
+      - node_b
+    volumes:
+      - node_a_data:/reticulum
+    networks:
+      - reticulum_network
+
+volumes:
+  node_a_data:
+  node_b_data:
+
+networks:
+  reticulum_network:
+    driver: bridge
