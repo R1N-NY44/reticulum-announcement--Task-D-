@@ -12,6 +12,8 @@ Implementasi menggunakan Docker Compose untuk menjalankan kedua node dalam conta
 
 ![Ilustrasi komunikasi Node A dan Node B](illust/Screenshot%202026-10-13%20202153.png)
 
+*(itu gambar cloud, cuman aku nga dapet asset yg bagus, jadi pakai bulet2)
+
 Sistem terdiri dari tiga komponen utama
 
 - **Node A** sebagai pengirim announcement
